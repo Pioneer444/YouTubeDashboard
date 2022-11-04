@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="BootstrapYuotube.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <title>BootstrapYuotube</title>
+</head>
+
+<body>
+
+    <!-- start navbar menu -->
+    <div class="navigation-bar bg-white sticky-top ">
+        <div class="container-fluid">
+            <div class="d-flex flex-wrap align-items-center justify-content-md-between mt-2">
+                <div class="col d-flex align-items-center col-md-auto">
+                    <div><svg style="height:24px; flex-shrink:0" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                            focusable="false" class="style-scope yt-icon"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                            <g class="style-scope yt-icon">
+                                <path d="M21,6H3V5h18V6z M21,11H3v1h18V11z M21,17H3v1h18V17z"
+                                    class="style-scope yt-icon"></path>
+                            </g>
+                        </svg></div>
+                    <img src="img/logo.png" width="100" class="ms-2" alt="">
+                </div>
+                <div class="col col-md-6 col-lg-5 d-none d-md-flex align-items-center justiify-content-center">
+                    <div class="input-group flex-nowrap col-10" style="width: 90%;">
+                        <input type="text" class="form-control rounded-0" placeholder="Search">
+                        <button class="input-group-text rounded-0">
+                            <svg style="height:24px; flex-shrink:0" viewBox="0 0 24 24"
+                                preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"
+                                style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                <g class="style-scope yt-icon">
+                                    <path
+                                        d="M20.87,20.17l-5.59-5.59C16.35,13.35,17,11.75,17,10c0-3.87-3.13-7-7-7s-7,3.13-7,7s3.13,7,7,7c1.75,0,3.35-0.65,4.58-1.71 l5.59,5.59L20.87,20.17z M10,16c-3.31,0-6-2.69-6-6s2.69-6,6-6s6,2.69,6,6S13.31,16,10,16z"
+                                        class="style-scope yt-icon"></path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="ms-2">
+                        <svg style="height:24px; flex-shrink:0" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                            focusable="false" class="style-scope yt-icon"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                            <g class="style-scope yt-icon">
+                                <path
+                                    d="M12 3C10.34 3 9 4.37 9 6.07V11.93C9 13.63 10.34 15 12 15C13.66 15 15 13.63 15 11.93V6.07C15 4.37 13.66 3 12 3ZM18.5 12H17.5C17.5 15.03 15.03 17.5 12 17.5C8.97 17.5 6.5 15.03 6.5 12H5.5C5.5 15.24 7.89 17.93 11 18.41V21H13V18.41C16.11 17.93 18.5 15.24 18.5 12Z"
+                                    class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <ul class="nav col-md-auto">
+                    <li><a href="#" class="nav-link px-2">
+                            <svg style="height:24px; flex-shrink:0" viewBox="0 0 24 24"
+                                preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"
+                                style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                <g class="style-scope yt-icon">
+                                    <path
+                                        d="M14,13h-3v3H9v-3H6v-2h3V8h2v3h3V13z M17,6H3v12h14v-6.39l4,1.83V8.56l-4,1.83V6 M18,5v3.83L22,7v8l-4-1.83V19H2V5H18L18,5 z"
+                                        class="style-scope yt-icon"></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li><a href="#" class="nav-link px-2">
+                            <svg style="height:24px; flex-shrink:0" viewBox="0 0 24 24"
+                                preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"
+                                style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                <g class="style-scope yt-icon">
+                                    <path
+                                        d="M10,20h4c0,1.1-0.9,2-2,2S10,21.1,10,20z M20,17.35V19H4v-1.65l2-1.88v-5.15c0-2.92,1.56-5.22,4-5.98V3.96	c0-1.42,1.49-2.5,2.99-1.76C13.64,2.52,14,3.23,14,3.96l0,0.39c2.44,0.75,4,3.06,4,5.98v5.15L20,17.35z"
+                                        class="style-scope yt-icon"></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li><a href="#" class="nav-link px-2">
+                            <img src="img/recram.svg" width="30" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end navbar menu -->
+
+    <!-- start content menu -->
+    <div class="container mt-4 mb-5">
+        <div class="row">
+            <div class="col-8">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/vlDzYIIOYmM" title="YouTube video"
+                        allowfullscreen></iframe>
+                </div>
+                <h5 class="mt-3">Eski istihbaratçı anlatıyor: Yunan casus operasyonu</h5>
+
+                <div class="row d-flex justify-content-between mt-2">
+                    <div class="col-4 d-flex justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <img src="img/gzt-logo.jpeg" class="me-2" width="50" alt="">
+                            </div>
+                            <div class="gzt">
+                                <div>
+                                    <h6>GZT</h6>
+                                </div>
+                                <div>
+                                    <p>752 B abone</p>
+                                </div>
+        
+                            </div>
+                        </div>
+                        <button type="button" class=" btn rounded-5 px-3 btn-sm btn-dark fw-bold">Abone ol</button>
+                    </div>
+
+                    <div class="col-6 d-flex justify-content-xxl-around ">
+                        <div class="btn-group btn-sm ">
+                            <button type="button" class="btn buton-1 btn-light"><span class="me-2 beğeni">3.7 B</span></button>
+                            <button type="button" class="btn buton-2 btn-light"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 24; height: 24;"><g class="style-scope yt-icon"><path d="M17,4h-1H6.57C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21 c0.58,0,1.14-0.24,1.52-0.65L17,14h4V4H17z M10.4,19.67C10.21,19.88,9.92,20,9.62,20c-0.26,0-0.5-0.11-0.63-0.3 c-0.07-0.1-0.15-0.26-0.09-0.47l1.52-4.94l0.4-1.29H9.46H5.23c-0.41,0-0.8-0.17-1.03-0.46c-0.12-0.15-0.25-0.4-0.18-0.72l1.34-6 C5.46,5.35,5.97,5,6.57,5H16v8.61L10.4,19.67z M20,13h-3V5h3V13z" class="style-scope yt-icon"></path></g></svg></button>
+                          </div>
+                        <button type="button" class="btn d-flex rounded-5 btn-light  align-items-center btn-sm"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon me-2" style="pointer-events: none; display: block; width: 24; height: 24;"><g mirror-in-rtl="" class="style-scope yt-icon"><path d="M15,5.63L20.66,12L15,18.37V15v-1h-1c-3.96,0-7.14,1-9.75,3.09c1.84-4.07,5.11-6.4,9.89-7.1L15,9.86V9V5.63 M14,3v6 C6.22,10.13,3.11,15.33,2,21c2.78-3.97,6.44-6,12-6v6l8-9L14,3L14,3z" class="style-scope yt-icon"></path></g></svg><span class="me-2">Paylaş</span> </button>
+                        <button type="button" class="btn d-flex rounded-5 btn-light  align-items-center btn-sm"><span class="me-2 m-lg-2 fw-bold">. . .</span> </button>
+                    </div>
+                </div>
+                 
+                 <div class="troof">
+                    <p class="text"> <span class="fw-bold"> 129.631 görüntüleme  1 Tem 2022 </span> <br> 
+                        Yunanistan Ulusal İstihbarat Teşkilatı (EYP) adına Türkiye'ye yönelik casusluk faaliyetinde bulunduğu belirlenen Yunan vatandaşı Muhammed Amar Ampara tutuklandı. Eski istihbaratçı Ali Burak Darıcılı, istihbarat operasyonlarının bilinmeyen taraflarını ve yakalanan Yunan casusla ilgili istihbarat kurallarını anlattı...<br>
+                        <span class="moreText"> <br>
+                        
+                        <span class="d-flex"> Videoyu beğenin! Yeni videolar için abone olun:<a href="#">https://bit.ly/3oO5zRn</a> </span>
+                        
+                        </span> <button class="read-more-btn">Daha fazla oku</buttun></p>
+                 </div>
+            
+                 
+                 <div class="d-flex flex-start mt-4">
+                    <a class="me-3" href="#">
+                      <img class="rounded-circle shadow-1-strong"
+                        src="https://pbs.twimg.com/media/FdCRCStXoAArgX6?format=jpg&name=medium" alt="avatar"
+                        width="50"  height="50"/>
+                    </a>
+                    <div class="flex-grow-1 flex-shrink-1">
+                      <div>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p class="mb-1">
+                            Kim Philby <span class="small">3 ay önce</span>
+                          </p>
+                        </div>
+                        <p class="small mb-0">
+                            Harold Adrian Russell "Kim" Philby İngiliz istihbaratçı ve Sovyet ajanı. MI6 içinde üst düzey yönetici olan Philby bu dönemde KGB için çalışmıştır. 1963 yılında Cambridge Five adı verilen casus grubuna bağlı olduğu ortaya çıkartılmıştır.
+                        </p>
+                      </div>
+
+                      <div class="d-flex justify-content mt-1 flex-start align-items-center">
+                        <div class="d-flex mt-2 me-2 justify-content-center align-items-center">
+                            <a href="#" class="me-1 "><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 24; height: 24;"><g class="style-scope yt-icon"><path d="M18.77,11h-4.23l1.52-4.94C16.38,5.03,15.54,4,14.38,4c-0.58,0-1.14,0.24-1.52,0.65L7,11H3v10h4h1h9.43 c1.06,0,1.98-0.67,2.19-1.61l1.34-6C21.23,12.15,20.18,11,18.77,11z M7,20H4v-8h3V20z M19.98,13.17l-1.34,6 C18.54,19.65,18.03,20,17.43,20H8v-8.61l5.6-6.06C13.79,5.12,14.08,5,14.38,5c0.26,0,0.5,0.11,0.63,0.3 c0.07,0.1,0.15,0.26,0.09,0.47l-1.52,4.94L13.18,12h1.35h4.23c0.41,0,0.8,0.17,1.03,0.46C19.92,12.61,20.05,12.86,19.98,13.17z" class="style-scope yt-icon"></path></g></svg></a>
+                            <span class="like">22</span>
+                        </div>
+
+                        <div class="d-flex mt-2 justify-content-center align-items-center">
+                            <a href="#"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope me-4 yt-icon" style="pointer-events: none; display: block; width: 24; height: 24;"><g class="style-scope yt-icon"><path d="M17,4h-1H6.57C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21 c0.58,0,1.14-0.24,1.52-0.65L17,14h4V4H17z M10.4,19.67C10.21,19.88,9.92,20,9.62,20c-0.26,0-0.5-0.11-0.63-0.3 c-0.07-0.1-0.15-0.26-0.09-0.47l1.52-4.94l0.4-1.29H9.46H5.23c-0.41,0-0.8-0.17-1.03-0.46c-0.12-0.15-0.25-0.4-0.18-0.72l1.34-6 C5.46,5.35,5.97,5,6.57,5H16v8.61L10.4,19.67z M20,13h-3V5h3V13z" class="style-scope yt-icon"></path></g></svg></a>
+                            <span class="yanıtla fw-bold">yanıtla</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-start mt-4">
+                    <a class="me-3" href="#">
+                      <img class="rounded-circle shadow-1-strong"
+                        src="https://pbs.twimg.com/media/FdCRCStXoAArgX6?format=jpg&name=medium" alt="avatar"
+                        width="50"  height="50"/>
+                    </a>
+                    <div class="flex-grow-1 flex-shrink-1">
+                      <div>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p class="mb-1">
+                            Kim Philby <span class="small">3 ay önce</span>
+                          </p>
+                        </div>
+                        <p class="small mb-0">
+                            Harold Adrian Russell "Kim" Philby İngiliz istihbaratçı ve Sovyet ajanı. MI6 içinde üst düzey yönetici olan Philby bu dönemde KGB için çalışmıştır. 1963 yılında Cambridge Five adı verilen casus grubuna bağlı olduğu ortaya çıkartılmıştır.
+                        </p>
+                      </div>
+
+                      <div class="d-flex justify-content mt-1 flex-start align-items-center">
+                        <div class="d-flex mt-2 me-2 justify-content-center align-items-center">
+                            <a href="#" class="me-1 "><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 24; height: 24;"><g class="style-scope yt-icon"><path d="M18.77,11h-4.23l1.52-4.94C16.38,5.03,15.54,4,14.38,4c-0.58,0-1.14,0.24-1.52,0.65L7,11H3v10h4h1h9.43 c1.06,0,1.98-0.67,2.19-1.61l1.34-6C21.23,12.15,20.18,11,18.77,11z M7,20H4v-8h3V20z M19.98,13.17l-1.34,6 C18.54,19.65,18.03,20,17.43,20H8v-8.61l5.6-6.06C13.79,5.12,14.08,5,14.38,5c0.26,0,0.5,0.11,0.63,0.3 c0.07,0.1,0.15,0.26,0.09,0.47l-1.52,4.94L13.18,12h1.35h4.23c0.41,0,0.8,0.17,1.03,0.46C19.92,12.61,20.05,12.86,19.98,13.17z" class="style-scope yt-icon"></path></g></svg></a>
+                            <span class="like">22</span>
+                        </div>
+
+                        <div class="d-flex mt-2 justify-content-center align-items-center">
+                            <a href="#"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope me-4 yt-icon" style="pointer-events: none; display: block; width: 24; height: 24;"><g class="style-scope yt-icon"><path d="M17,4h-1H6.57C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21 c0.58,0,1.14-0.24,1.52-0.65L17,14h4V4H17z M10.4,19.67C10.21,19.88,9.92,20,9.62,20c-0.26,0-0.5-0.11-0.63-0.3 c-0.07-0.1-0.15-0.26-0.09-0.47l1.52-4.94l0.4-1.29H9.46H5.23c-0.41,0-0.8-0.17-1.03-0.46c-0.12-0.15-0.25-0.4-0.18-0.72l1.34-6 C5.46,5.35,5.97,5,6.57,5H16v8.61L10.4,19.67z M20,13h-3V5h3V13z" class="style-scope yt-icon"></path></g></svg></a>
+                            <span class="yanıtla fw-bold">yanıtla</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-start mt-4">
+                    <a class="me-3" href="#">
+                      <img class="rounded-circle shadow-1-strong"
+                        src="https://pbs.twimg.com/media/FdCRCStXoAArgX6?format=jpg&name=medium" alt="avatar"
+                        width="50"  height="50"/>
+                    </a>
+                    <div class="flex-grow-1 flex-shrink-1">
+                      <div>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p class="mb-1">
+                            Kim Philby <span class="small">3 ay önce</span>
+                          </p>
+                        </div>
+                        <p class="small mb-0">
+                            Harold Adrian Russell "Kim" Philby İngiliz istihbaratçı ve Sovyet ajanı. MI6 içinde üst düzey yönetici olan Philby bu dönemde KGB için çalışmıştır. 1963 yılında Cambridge Five adı verilen casus grubuna bağlı olduğu ortaya çıkartılmıştır.
+                        </p>
+                      </div>
+
+                      <div class="d-flex justify-content mt-1 flex-start align-items-center">
+                        <div class="d-flex mt-2 me-2 justify-content-center align-items-center">
+                            <a href="#" class="me-1 "><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 24; height: 24;"><g class="style-scope yt-icon"><path d="M18.77,11h-4.23l1.52-4.94C16.38,5.03,15.54,4,14.38,4c-0.58,0-1.14,0.24-1.52,0.65L7,11H3v10h4h1h9.43 c1.06,0,1.98-0.67,2.19-1.61l1.34-6C21.23,12.15,20.18,11,18.77,11z M7,20H4v-8h3V20z M19.98,13.17l-1.34,6 C18.54,19.65,18.03,20,17.43,20H8v-8.61l5.6-6.06C13.79,5.12,14.08,5,14.38,5c0.26,0,0.5,0.11,0.63,0.3 c0.07,0.1,0.15,0.26,0.09,0.47l-1.52,4.94L13.18,12h1.35h4.23c0.41,0,0.8,0.17,1.03,0.46C19.92,12.61,20.05,12.86,19.98,13.17z" class="style-scope yt-icon"></path></g></svg></a>
+                            <span class="like">22</span>
+                        </div>
+
+                        <div class="d-flex mt-2 justify-content-center align-items-center">
+                            <a href="#"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope me-4 yt-icon" style="pointer-events: none; display: block; width: 24; height: 24;"><g class="style-scope yt-icon"><path d="M17,4h-1H6.57C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21 c0.58,0,1.14-0.24,1.52-0.65L17,14h4V4H17z M10.4,19.67C10.21,19.88,9.92,20,9.62,20c-0.26,0-0.5-0.11-0.63-0.3 c-0.07-0.1-0.15-0.26-0.09-0.47l1.52-4.94l0.4-1.29H9.46H5.23c-0.41,0-0.8-0.17-1.03-0.46c-0.12-0.15-0.25-0.4-0.18-0.72l1.34-6 C5.46,5.35,5.97,5,6.57,5H16v8.61L10.4,19.67z M20,13h-3V5h3V13z" class="style-scope yt-icon"></path></g></svg></a>
+                            <span class="yanıtla fw-bold">yanıtla</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-start mt-4">
+                    <a class="me-3" href="#">
+                      <img class="rounded-circle shadow-1-strong"
+                        src="https://pbs.twimg.com/media/FdCRCStXoAArgX6?format=jpg&name=medium" alt="avatar"
+                        width="50"  height="50"/>
+                    </a>
+                    <div class="flex-grow-1 flex-shrink-1">
+                      <div>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p class="mb-1">
+                            Kim Philby <span class="small">3 ay önce</span>
+                          </p>
+                        </div>
+                        <p class="small mb-0">
+                            Harold Adrian Russell "Kim" Philby İngiliz istihbaratçı ve Sovyet ajanı. MI6 içinde üst düzey yönetici olan Philby bu dönemde KGB için çalışmıştır. 1963 yılında Cambridge Five adı verilen casus grubuna bağlı olduğu ortaya çıkartılmıştır.
+                        </p>
+                      </div>
+
+                      <div class="d-flex justify-content mt-1 flex-start align-items-center">
+                        <div class="d-flex mt-2 me-2 justify-content-center align-items-center">
+                            <a href="#" class="me-1 "><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 24; height: 24;"><g class="style-scope yt-icon"><path d="M18.77,11h-4.23l1.52-4.94C16.38,5.03,15.54,4,14.38,4c-0.58,0-1.14,0.24-1.52,0.65L7,11H3v10h4h1h9.43 c1.06,0,1.98-0.67,2.19-1.61l1.34-6C21.23,12.15,20.18,11,18.77,11z M7,20H4v-8h3V20z M19.98,13.17l-1.34,6 C18.54,19.65,18.03,20,17.43,20H8v-8.61l5.6-6.06C13.79,5.12,14.08,5,14.38,5c0.26,0,0.5,0.11,0.63,0.3 c0.07,0.1,0.15,0.26,0.09,0.47l-1.52,4.94L13.18,12h1.35h4.23c0.41,0,0.8,0.17,1.03,0.46C19.92,12.61,20.05,12.86,19.98,13.17z" class="style-scope yt-icon"></path></g></svg></a>
+                            <span class="like">22</span>
+                        </div>
+
+                        <div class="d-flex mt-2 justify-content-center align-items-center">
+                            <a href="#"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope me-4 yt-icon" style="pointer-events: none; display: block; width: 24; height: 24;"><g class="style-scope yt-icon"><path d="M17,4h-1H6.57C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21 c0.58,0,1.14-0.24,1.52-0.65L17,14h4V4H17z M10.4,19.67C10.21,19.88,9.92,20,9.62,20c-0.26,0-0.5-0.11-0.63-0.3 c-0.07-0.1-0.15-0.26-0.09-0.47l1.52-4.94l0.4-1.29H9.46H5.23c-0.41,0-0.8-0.17-1.03-0.46c-0.12-0.15-0.25-0.4-0.18-0.72l1.34-6 C5.46,5.35,5.97,5,6.57,5H16v8.61L10.4,19.67z M20,13h-3V5h3V13z" class="style-scope yt-icon"></path></g></svg></a>
+                            <span class="yanıtla fw-bold">yanıtla</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+            </div>
+            
+            <div class="col-4">
+                <div>
+                    <div class="d-flex">
+                        <div class="rice1">
+                            <img src="img/rrr.webp" width="200" alt="">
+                        </div>
+                        <div class="rice">
+                            <h4>Eski istihbaratçı anlatıyor: Mit, PKK yöneticisini nasıl yakaladı?</h4>
+                            <div>GZT <br> 1,3 MN görüntülenme 1 saat önce</div>
+                        </div>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <div class="rice1">
+                            <img src="img/rrr.webp" width="200" alt="">
+                        </div>
+                        <div class="rice">
+                            <h4>Eski istihbaratçı anlatıyor: Mit, PKK yöneticisini nasıl yakaladı?</h4>
+                            <div>GZT <br> 1,3 MN görüntülenme 1 saat önce</div>
+                        </div>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <div class="rice1">
+                            <img src="img/rrr.webp" width="200" alt="">
+                        </div>
+                        <div class="rice">
+                            <h4>Eski istihbaratçı anlatıyor: Mit, PKK yöneticisini nasıl yakaladı?</h4>
+                            <div>GZT <br> 1,3 MN görüntülenme 1 saat önce</div>
+                        </div>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <div class="rice1">
+                            <img src="img/rrr.webp" width="200" alt="">
+                        </div>
+                        <div class="rice">
+                            <h4>Eski istihbaratçı anlatıyor: Mit, PKK yöneticisini nasıl yakaladı?</h4>
+                            <div>GZT <br> 1,3 MN görüntülenme 1 saat önce</div>
+                        </div>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <div class="rice1">
+                            <img src="img/rrr.webp" width="200" alt="">
+                        </div>
+                        <div class="rice">
+                            <h4>Eski istihbaratçı anlatıyor: Mit, PKK yöneticisini nasıl yakaladı?</h4>
+                            <div>GZT <br> 1,3 MN görüntülenme 1 saat önce</div>
+                        </div>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <div class="rice1">
+                            <img src="img/rrr.webp" width="200" alt="">
+                        </div>
+                        <div class="rice">
+                            <h4>Eski istihbaratçı anlatıyor: Mit, PKK yöneticisini nasıl yakaladı?</h4>
+                            <div>GZT <br> 1,3 MN görüntülenme 1 saat önce</div>
+                        </div>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <div class="rice1">
+                            <img src="img/rrr.webp" width="200" alt="">
+                        </div>
+                        <div class="rice">
+                            <h4>Eski istihbaratçı anlatıyor: Mit, PKK yöneticisini nasıl yakaladı?</h4>
+                            <div>GZT <br> 1,3 MN görüntülenme 1 saat önce</div>
+                        </div>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <div class="rice1">
+                            <img src="img/rrr.webp" width="200" alt="">
+                        </div>
+                        <div class="rice">
+                            <h4>Eski istihbaratçı anlatıyor: Mit, PKK yöneticisini nasıl yakaladı?</h4>
+                            <div>GZT <br> 1,3 MN görüntülenme 1 saat önce</div>
+                        </div>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <div class="rice1">
+                            <img src="img/rrr.webp" width="200" alt="">
+                        </div>
+                        <div class="rice">
+                            <h4>Eski istihbaratçı anlatıyor: Mit, PKK yöneticisini nasıl yakaladı?</h4>
+                            <div>GZT <br> 1,3 MN görüntülenme 1 saat önce</div>
+                        </div>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <div class="rice1">
+                            <img src="img/rrr.webp" width="200" alt="">
+                        </div>
+                        <div class="rice">
+                            <h4>Eski istihbaratçı anlatıyor: Mit, PKK yöneticisini nasıl yakaladı?</h4>
+                            <div>GZT <br> 1,3 MN görüntülenme 1 saat önce</div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- end content menu -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigi"n="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+

@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    display: block !important;
+    text-decoration: none !important;
+}
+.sidebar{
+    width: 250px;
+    height: 100%;
+   
+    left: 0;
+    top: 50px;
+    background-color: #fff;
+    overflow: auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    z-index: 99;
+}
+
+
+.nav-link span{
+     padding: 0px 15px;  
+     vertical-align: bottom;
+     white-space: nowrap;
+     font-size: 15px; 
+}
+
+.sidebar span{
+    padding-left: 20px;
+}
+
+.title{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #606060;
+}
+
+
+.chip-container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    overflow: hidden;
+    overflow-x: auto;
+    width: 83%;
+    height: 52px;
+    float: right;
+    background-color: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 10px 15px;
+    z-index: 99;
+}
+
+.chip{
+    display: block;
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    margin-left: 5px;
+    border-radius: 12px;
+}
+
+.active{
+    background: #000;
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    visibility: hidden;
+    opacity: 0
+}
+
+
+#content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #dddd;
+}
+
+.tag{
+    width: 100%;
+}
+
+.card-video h4{
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+}
+
+.card-video div{
+    color: gray;
+    font-size: 13px;
+}
+
+.rice h4{
+    margin-top: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+}
+
+.rice div{
+    
+    color: gray;
+    font-size: 13px;
+}
+
+.rice1 img{
+    margin-right: 10px;
+    border-radius: 6px;
+}
+
+.gzt h6{
+   margin-bottom: 0 !important;
+}
+
+.gzt p{
+    margin-bottom: 0px;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #606060;
+}
+
+.buton-1{
+    border-radius: 50px 0px 0px 50px !important;
+}
+
+.buton-2{
+    border-radius: 0px 50px 50px 0px !important;
+}
+
+
+.beğeni{
+    padding-right: 8px;
+    border-right: solid #E1E1E1;
+}
+
+.text{
+    font-size: 14px;
+}
+
+.moreText{
+    display: none;
+}
+
+.read-more-btn{
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.text.show-more .moreText{
+    display: inline;
+}
+
+.troof{
+    margin-top: 15px;
+    border-radius: 15px;
+    padding: 15px;
+    background: #EFEFEF;
+}
+
+.troof p{
+    margin-bottom: 0px !important;
+}
+
+.like{
+    font-size: 12px;
+}
+
+.yanıtla{
+    font-size: 12px;
+}
+
